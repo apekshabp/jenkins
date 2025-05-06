@@ -17,7 +17,7 @@ pipeline {
         stage("Docker HUB Login"){
             steps{
                 script{
-                    sh 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 897722692916.dkr.ecr.ap-south-1.amazonaws.com'
+                    sh 'sudo aws ecr get-login-password --region ap-south-1 | sudo docker login --username AWS --password-stdin 897722692916.dkr.ecr.ap-south-1.amazonaws.com'
                 }
             }
         }
